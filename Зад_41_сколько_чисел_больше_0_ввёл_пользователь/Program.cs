@@ -19,7 +19,7 @@ int CountNumbersPositive(int[] array)
 
 
 Console.WriteLine("Введите несколько чисел через пробел: ");
-int[] userNumbers = Console.ReadLine()!.Split().Select(x => Convert.ToInt32(x)).ToArray();
+int[] userNumbers = Console.ReadLine()!.Split(' ').Select(x => Convert.ToInt32(x)).ToArray();
 int userCount = CountNumbersPositive(userNumbers);
 
 if ((userCount - 1) % 10 == 0 || userCount == 1)
